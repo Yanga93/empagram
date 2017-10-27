@@ -1,0 +1,84 @@
+
+<p id="username">Logged in as: {{username}} </p>
+<div class="row ">
+  <div class="columns">
+    <h2 class="heading">EMPAGRAM</h2>
+    <p class="shadow">Caring about others, running the risk of feeling, and leaving an impact on people, <br> brings happiness see how we bring happiness.</p>
+
+  </div>
+  <br>
+</div>
+<div class="row">
+  <div class="columns">
+
+  </div>
+</div>
+
+<div class="row shadow">
+
+  <!-- <h1 class="heading ">How JUMO affected people's lives</h1> -->
+    <h2>How JUMO affected people's lives</h2> <br>
+  {{#each stories}}
+
+    <div class="medium-4 large-2 columns">
+      <p>
+        Like(s){{likeCount}}
+        <a data-open="storyModal{{id}}">
+          <img class="thumbnail" src="img/{{photoName}}.jpg" alt="Trolltunga Norway" ></a>
+          {{heading}}
+
+        </p>
+
+      <div class="reveal" id="storyModal{{id}}" data-reveal>
+      <p class = "picture"><img class="imgGrad" src="img/{{photoName}}.jpg" alt="Trolltunga Norway"></p>
+        <h1>{{heading}}</h1>
+        <p>{{content}}</p>
+        <a href="likeOrUnlike/{{id}}">Like</a>
+
+        <button class="close-button" data-close aria-label="Close reveal" type="button">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+  </div>
+  {{/each}}
+</div>
+<h1 class="heading">↓ Did You Know?</h1><br>
+<div class="row">
+  <div class="columns">
+    <div class="orbit" role="region" aria-label="Favorite Text Ever" data-orbit>
+      <ul class="orbit-container shadow">
+        <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+        <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+        <li class="is-active orbit-slide">
+          <div class="docs-example-orbit-slide">
+            <p>To widen monthly budgets: Loans such as payday loans and money advances are by some people to help them tide over their bills before payday. Due to the financial crisis, the cash crunch has become real for many
+              people in the Africa. Payday loan usage has soared as the key way to help people sort out a few payments while they are waiting for their pay to come through. Relying on loans every month is not a good idea and payday loans and money advances
+              should only be used in the short-term when a pressing financial need comes up.</p>
+          </div>
+        </li>
+        <li class="orbit-slide">
+          <div class="docs-example-orbit-slide">
+            <p>Open-ended Loans: Loans to family and friends tend to be open-ended. The parties don’t reach an agreement for a timeline for repayments, and don’t include interest on the loan. Lenders don’t know when their money
+              will be returned, and borrowers don’t know when to repay the loans.</p>
+          </div>
+        </li>
+        <li class="orbit-slide">
+          <div class="docs-example-orbit-slide">
+            <p>Africans were the biggest borrowers in the world in 2014, according to a report issued by the World Bank. And they appear to be borrowing mostly from friends and family, private micro-lenders and to a far lesser
+              extent from financial institutions.</div>
+        </li>
+        <li class="orbit-slide">
+          <div class="docs-example-orbit-slide">
+            <p>7 out of 10 ﻿﻿﻿graduates are now graduating with some form of student loan debt. With an average balance of $28,400, student debt is a big part of the average college graduate's life.</div>
+        </li>
+      </ul>
+      <nav class="orbit-bullets">
+        <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span></button>
+        <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+        <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+        <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
+      </nav>
+    </div>
+  </div>
+</div>
